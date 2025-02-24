@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import RCTour from '@rc-component/tour-forge';
-import type { TourProps as RcTourProps } from '@rc-component/tour-forge';
+import RCTour from '@erick-forge/tour-forge';
+import type { TourProps as RcTourProps } from '@erick-forge/tour-forge';
 import classNames from 'classnames';
 
 import { useZIndex } from '../_util/hooks/useZIndex';

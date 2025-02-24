@@ -8,6 +8,7 @@ import Button from '../button';
 // import { useLocale } from '../locale';
 // import defaultLocale from '../locale/en_US';
 import type { TourStepProps } from './interface';
+import Flex from '../flex';
 
 function isValidNode(node: ReactNode): boolean {
   return node !== undefined && node !== null;
@@ -108,9 +109,11 @@ const TourPanel: React.FC<TourPanelProps> = (props) => {
   return (
     <div className={`${prefixCls}-content`}>
       <div className={`${prefixCls}-inner`}>
-        {closable && mergedCloseIcon}
+        <Flex justify="space-between">
+          {headerNode}
+          {closable && mergedCloseIcon}
+        </Flex>
         {coverNode}
-        {headerNode}
         {descriptionNode}
         <div className={`${prefixCls}-footer`}>
           {total > 1 && <div className={`${prefixCls}-indicators`}>{mergedIndicatorNode}</div>}

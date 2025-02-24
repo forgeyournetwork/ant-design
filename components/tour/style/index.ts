@@ -56,7 +56,6 @@ const genBaseStyle: GenerateStyle<TourToken> = (token) => {
     boxShadowTertiary,
     zIndexPopup,
     colorBgElevated,
-    fontWeightStrong,
     marginXS,
     colorTextLightSolid,
     tourBorderRadius,
@@ -146,7 +145,8 @@ const genBaseStyle: GenerateStyle<TourToken> = (token) => {
             width: `calc(100% - ${unit(closeBtnSize)})`,
             wordBreak: 'break-word',
             [`${componentCls}-title`]: {
-              fontWeight: fontWeightStrong,
+              fontWeight: 900,
+              fontSize: 'medium',
             },
           },
 

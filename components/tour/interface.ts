@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import type {
   TourProps as RCTourProps,
   TourStepProps as RCTourStepProps,
-} from '@rc-component/tour-forge';
+} from '@erick-forge/tour-forge';
 
 export interface TourProps extends Omit<RCTourProps, 'renderPanel'> {
   steps?: TourStepProps[];
