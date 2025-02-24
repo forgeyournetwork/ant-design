@@ -3,10 +3,10 @@ import React from 'react';
 import CloseOutlined from '@ant-design/icons/CloseOutlined';
 import classNames from 'classnames';
 
-import type { ButtonProps } from '../button';
+// import type { ButtonProps } from '../button';
 import Button from '../button';
-import { useLocale } from '../locale';
-import defaultLocale from '../locale/en_US';
+// import { useLocale } from '../locale';
+// import defaultLocale from '../locale/en_US';
 import type { TourStepProps } from './interface';
 
 function isValidNode(node: ReactNode): boolean {
@@ -31,13 +31,13 @@ const TourPanel: React.FC<TourPanelProps> = (props) => {
     total = 1,
     title,
     onClose,
-    onPrev,
+    // onPrev,
     onNext,
     onFinish,
     cover,
     description,
     nextButtonProps,
-    prevButtonProps,
+    // prevButtonProps,
     type: stepType,
     closable,
   } = stepProps;
@@ -52,10 +52,10 @@ const TourPanel: React.FC<TourPanelProps> = (props) => {
 
   const isLastStep = current === total - 1;
 
-  const prevBtnClick = () => {
-    onPrev?.();
-    prevButtonProps?.onClick?.();
-  };
+  // const prevBtnClick = () => {
+  //   onPrev?.();
+  //   prevButtonProps?.onClick?.();
+  // };
 
   const nextBtnClick = () => {
     if (isLastStep) {
@@ -98,12 +98,12 @@ const TourPanel: React.FC<TourPanelProps> = (props) => {
 
   const mainBtnType = mergedType === 'primary' ? 'default' : 'primary';
 
-  const secondaryBtnProps: ButtonProps = {
-    type: 'default',
-    ghost: mergedType === 'primary',
-  };
+  // const secondaryBtnProps: ButtonProps = {
+  //   type: 'default',
+  //   ghost: mergedType === 'primary',
+  // };
 
-  const [contextLocale] = useLocale('Tour', defaultLocale.Tour);
+  // const [contextLocale] = useLocale('Tour', defaultLocale.Tour);
 
   return (
     <div className={`${prefixCls}-content`}>
@@ -115,26 +115,26 @@ const TourPanel: React.FC<TourPanelProps> = (props) => {
         <div className={`${prefixCls}-footer`}>
           {total > 1 && <div className={`${prefixCls}-indicators`}>{mergedIndicatorNode}</div>}
           <div className={`${prefixCls}-buttons`}>
-            {current !== 0 ? (
-              <Button
-                {...secondaryBtnProps}
-                {...prevButtonProps}
-                onClick={prevBtnClick}
-                size="small"
-                className={classNames(`${prefixCls}-prev-btn`, prevButtonProps?.className)}
-              >
-                {prevButtonProps?.children ?? contextLocale?.Previous}
-              </Button>
-            ) : null}
+            {current !== 0
+              ? // <Button
+                //   {...secondaryBtnProps}
+                //   {...prevButtonProps}
+                //   onClick={prevBtnClick}
+                //   size="small"
+                //   className={classNames(`${prefixCls}-prev-btn`, prevButtonProps?.className)}
+                // >
+                //   {prevButtonProps?.children ?? contextLocale?.Previous}
+                // </Button>
+                null
+              : null}
             <Button
               type={mainBtnType}
               {...nextButtonProps}
               onClick={nextBtnClick}
-              size="small"
+              variant="outlined"
               className={classNames(`${prefixCls}-next-btn`, nextButtonProps?.className)}
             >
-              {nextButtonProps?.children ??
-                (isLastStep ? contextLocale?.Finish : contextLocale?.Next)}
+              {nextButtonProps?.children ?? (isLastStep ? 'Done' : 'Next')}
             </Button>
           </div>
         </div>
