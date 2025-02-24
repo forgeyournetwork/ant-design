@@ -162,6 +162,7 @@ const genBaseStyle: GenerateStyle<TourToken> = (token) => {
             display: 'flex',
             [`${componentCls}-indicators`]: {
               display: 'inline-block',
+              marginTop: 8,
 
               [`${componentCls}-indicator`]: {
                 width: indicatorWidth,
