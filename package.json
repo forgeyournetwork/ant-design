@@ -2,6 +2,7 @@
   "name": "antd",
   "version": "5.24.1",
   "description": "An enterprise-class UI design language and React components implementation",
+  "author": "AntD - Forge",
   "license": "MIT",
   "funding": {
     "type": "opencollective",
@@ -10,7 +11,7 @@
   "homepage": "https://ant.design",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ant-design/ant-design"
+    "url": "git+https://github.com/ant-design/ant-design.git"
   },
   "bugs": {
     "url": "https://github.com/ant-design/ant-design/issues"
@@ -351,5 +352,10 @@
   "title": "Ant Design",
   "tnpm": {
     "mode": "npm"
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
   }
 }
