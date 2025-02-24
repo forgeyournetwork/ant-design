@@ -10,7 +10,7 @@
   },
   "homepage": "https://ant.design",
   "repository": {
-    "url": "https://github.com/forgeyournetwork/ant-design"
+    "url": "git+https://github.com/forgeyournetwork/ant-design.git"
   },
   "bugs": {
     "url": "https://github.com/forgeyournetwork/ant-design/issues"
