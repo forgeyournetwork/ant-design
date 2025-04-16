@@ -83,6 +83,10 @@ yarn add antd
 pnpm add antd
 ```
 
+```bash
+bun add antd
+```
+
 ## 🔨 示例
 
 ```tsx
@@ -184,6 +188,10 @@ $ npm start
   </td>
 </tr>
 </table>
+
+<a href="https://openomy.app/github/ant-design/ant-design" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://openomy.app/svg?repo=ant-design/ant-design&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+ </a>
 
 请参考[贡献指南](https://ant.design/docs/react/contributing-cn).
 
