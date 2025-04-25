@@ -146,12 +146,13 @@ const genBaseStyle: GenerateStyle<TourToken> = (token) => {
             wordBreak: 'break-word',
             [`${componentCls}-title`]: {
               fontWeight: 900,
-              fontSize: 'medium',
+              fontSize: 'large',
             },
           },
 
           [`${componentCls}-description`]: {
             padding: `0 ${unit(padding)}`,
+            marginBottom: '10px',
             wordWrap: 'break-word',
           },
 
