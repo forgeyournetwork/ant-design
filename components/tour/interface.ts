@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import type {
   TourProps as RCTourProps,
   TourStepProps as RCTourStepProps,
-} from '@erick-forge/tour-forge';
+} from '@rc-component/tour';
 
 export interface TourProps extends Omit<RCTourProps, 'renderPanel'> {
   steps?: TourStepProps[];
@@ -25,6 +25,7 @@ export interface TourStepProps extends RCTourStepProps {
     onClick?: () => void;
     className?: string;
     style?: React.CSSProperties;
+    renderButton?: boolean;
   };
   indicatorsRender?: (current: number, total: number) => ReactNode;
   type?: 'default' | 'primary'; //	default type, affects the background color and text color
